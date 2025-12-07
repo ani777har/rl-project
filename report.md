@@ -186,7 +186,7 @@ The following table summarizes the final performance of each algorithm after 500
 
 | **PPO** | **9358.90** | +/- 0.14 | **96.58** | 8291 |
 
-  ```
+
 
 ### Learning Curves
 
@@ -371,4 +371,4 @@ Results are generated through training logs, deterministic evaluations, and visu
   - **Real-World Transfer**: Add domain randomization or sim-to-real techniques.
   - **Code Enhancements**: Parallel training (multiple seeds), automated plotting, and integration with Weights & Biases for logging.
 
-
+```
