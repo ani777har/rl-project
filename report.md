@@ -227,16 +227,11 @@ The learning curves demonstrate the agent's progress over time. All three algori
 *   **Longer Tuning**: Increase the number of tuning trials and the range of hyperparameters to potentially find even more efficient configurations.
 
 ## Algorithm Summary
-
 | Algorithm | Mean Reward | Std Dev | Training Time (s) | Episodes Logged |
-
-| :--- | :--- | :--- | :--- | :--- |The experiment evaluates three RL algorithms from the stable_baselines3 library, each suited to continuous control tasks. All are model-free (no environment model) and use neural networks for policy and value functions.
-
-| **SAC** | 9354.95 | +/- 0.10 | 465.11 | 3831 |
-
-| **TD3** | 9358.38 | +/- 1.45 | 486.14 | 3329 |### Soft Actor-Critic (SAC)
-
-| **PPO** | **9358.90** | +/- 0.14 | **96.58** | 8291 |- **Type**: Off-policy, actor-critic with entropy regularization.
+|-----------|-------------|---------|--------------------|------------------|
+| SAC       | 9354.95     | ± 0.10  | 465.11             | 3831             |
+| TD3       | 9358.38     | ± 1.45  | 486.14             | 3329             |
+| PPO       | 9358.90     | ± 0.14  | 96.58              | 8291             |
 
 - **Key Features**:
 
