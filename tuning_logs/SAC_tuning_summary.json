@@ -1,0 +1,133 @@
+{
+  "algo": "SAC",
+  "env_id": "InvertedDoublePendulum-v4",
+  "n_trials": 6,
+  "train_timesteps": 75000,
+  "eval_episodes": 5,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "best_score": 9359.872298666667,
+  "best_seed": 0,
+  "best_hyperparams": {
+    "learning_rate": 0.0002987008386012388,
+    "batch_size": 512,
+    "tau": 0.009776599864738916,
+    "gamma": 0.9967884065636865,
+    "train_freq": 8,
+    "gradient_steps": 1,
+    "learning_starts": 10000
+  },
+  "trials": [
+    {
+      "trial": 0,
+      "hyperparams": {
+        "learning_rate": 0.0020080373301738963,
+        "batch_size": 256,
+        "tau": 0.003483438607263992,
+        "gamma": 0.9711530253807622,
+        "train_freq": 8,
+        "gradient_steps": 2,
+        "learning_starts": 10000
+      },
+      "seed_scores": [
+        9359.8617206,
+        9355.6300916,
+        9359.8580108
+      ],
+      "score_mean": 9358.449941
+    },
+    {
+      "trial": 1,
+      "hyperparams": {
+        "learning_rate": 0.0002987008386012388,
+        "batch_size": 512,
+        "tau": 0.009776599864738916,
+        "gamma": 0.9967884065636865,
+        "train_freq": 8,
+        "gradient_steps": 1,
+        "learning_starts": 10000
+      },
+      "seed_scores": [
+        9359.9341476,
+        9359.862829400001,
+        9359.819919000001
+      ],
+      "score_mean": 9359.872298666667
+    },
+    {
+      "trial": 2,
+      "hyperparams": {
+        "learning_rate": 0.0024058766004845062,
+        "batch_size": 256,
+        "tau": 0.006538545355367981,
+        "gamma": 0.9815635769863605,
+        "train_freq": 4,
+        "gradient_steps": 1,
+        "learning_starts": 5000
+      },
+      "seed_scores": [
+        9357.9993546,
+        9359.7351042,
+        9353.45955
+      ],
+      "score_mean": 9357.064669599999
+    },
+    {
+      "trial": 3,
+      "hyperparams": {
+        "learning_rate": 0.0006203779517599353,
+        "batch_size": 128,
+        "tau": 0.01463161879543586,
+        "gamma": 0.9835603712093596,
+        "train_freq": 1,
+        "gradient_steps": 2,
+        "learning_starts": 10000
+      },
+      "seed_scores": [
+        9359.0002888,
+        9359.2484952,
+        9359.046827400001
+      ],
+      "score_mean": 9359.098537133334
+    },
+    {
+      "trial": 4,
+      "hyperparams": {
+        "learning_rate": 0.0028993100318138003,
+        "batch_size": 256,
+        "tau": 0.01602562783910798,
+        "gamma": 0.9749565134759806,
+        "train_freq": 4,
+        "gradient_steps": 4,
+        "learning_starts": 1000
+      },
+      "seed_scores": [
+        9359.8301584,
+        867.8701877999999,
+        9355.0164776
+      ],
+      "score_mean": 6527.5722746
+    },
+    {
+      "trial": 5,
+      "hyperparams": {
+        "learning_rate": 0.000537307002812408,
+        "batch_size": 128,
+        "tau": 0.018089851955646268,
+        "gamma": 0.9941250798200175,
+        "train_freq": 8,
+        "gradient_steps": 1,
+        "learning_starts": 1000
+      },
+      "seed_scores": [
+        9359.6777332,
+        9359.9027068,
+        9359.9237336
+      ],
+      "score_mean": 9359.834724533333
+    }
+  ]
+}
