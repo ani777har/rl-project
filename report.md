@@ -1,24 +1,24 @@
-# Reinforcement Learning Final Project Report# Reinforcement Learning Project Report: InvertedDoublePendulum-v4Reinforcement Learning <br>
+# Reinforcement Learning Project Report: InvertedDoublePendulum-v4Reinforcement Learning <br>
 
 **Project:** InvertedDoublePendulum-v4  
 
-**Team Members:** Husik Sargsyan, Ani Harutyunyan, Viktoria Melkumyan  Final Project <br>
+**Team Members:** Husik Sargsyan, Ani Harutyunyan, Viktoria Melkumyan <br>
 
 **Instructor:** Davit Ghazaryan  
 
-**Date:** December 8, 2025## 1. Problem Definition​​InvertedDoublePendulum-v4 <br>
+**Date:** December 8, 2025 <br>
 
 
 
----The goal of this project is to train a Reinforcement Learning (RL) agent to balance a double inverted pendulum on a cart. The system consists of a cart that can move linearly and a two-link pole attached to it. The objective is to keep the double pendulum upright by applying forces to the cart. This is a classic control problem that requires the agent to learn precise continuous control policies.Husik Sargsyan <br>
+The goal of this project is to train a Reinforcement Learning (RL) agent to balance a double inverted pendulum on a cart. The system consists of a cart that can move linearly and a two-link pole attached to it. The objective is to keep the double pendulum upright by applying forces to the cart. This is a classic control problem that requires the agent to learn precise continuous control policies. <br>
 
 
 
-## 1. Problem DefinitionAni Harutyunyan <br>
+## 1. Problem Definition <br>
 
 This experiment addresses a classic continuous control problem in reinforcement learning (RL): training autonomous agents to balance an inverted double pendulum in a simulated physics environment. The inverted double pendulum is an inherently unstable system consisting of two linked rods (pendulum segments) that must be kept upright despite gravitational forces and dynamic perturbations. The agent learns to apply corrective torques to the base joint to maintain stability, mimicking real-world challenges in robotics, such as stabilizing legged robots, drones, or vehicles.
 
-## 2. Environment DescriptionViktoria Melkumyan <br>
+## 2. Environment Description <br>
 
 The core RL formulation involves an agent interacting with an environment to maximize cumulative rewards. The agent starts with no prior knowledge and must explore actions to discover a policy (strategy) that achieves long-term stability. This task tests the agent's ability to handle non-linear dynamics, delayed feedback, and the exploration-exploitation trade-off. Success is measured by the agent's ability to sustain balance for extended periods, quantified through episode rewards and learning curves.
 
@@ -101,12 +101,11 @@ The reward function encourages the agent to keep the pendulum upright while mini
 We evaluated three algorithms suitable for continuous control:## 4. Training Setup- **Components**:
 
 
-
-1.  **SAC (Soft Actor-Critic)**: An off-policy, maximum entropy actor-critic algorithm. It optimizes a stochastic policy to maximize both the expected return and the entropy of the policy, encouraging exploration and robustness.The project involved two phases: Hyperparameter Tuning and Final Training.  1. `cart_pos`: Position of the cart along the track (meters).
+1.  **SAC (Soft Actor-Critic)**: An off-policy, maximum entropy actor-critic algorithm. It optimizes a stochastic policy to maximize both the expected return and the entropy of the policy, encouraging exploration and robustness.The project involved two phases: Hyperparameter Tuning and Final Training. 
 
 2.  **TD3 (Twin Delayed DDPG)**: An off-policy algorithm that improves upon DDPG by using two critics to reduce overestimation bias, delayed policy updates, and target policy smoothing. It learns a deterministic policy.
 
-3.  **PPO (Proximal Policy Optimization)**: An on-policy policy gradient algorithm. It uses a clipped objective function to prevent large policy updates, ensuring stable and monotonic improvement.  2. `cart_vel`: Velocity of the cart (m/s).
+3.  **PPO (Proximal Policy Optimization)**: An on-policy policy gradient algorithm. It uses a clipped objective function to prevent large policy updates, ensuring stable and monotonic improvement. 
 
 
 
@@ -114,7 +113,7 @@ We evaluated three algorithms suitable for continuous control:## 4. Training Set
 
 The project involved two phases: **Hyperparameter Tuning** and **Final Training**.
 
-We performed a random search with **6 trials** per algorithm to find the best hyperparameters. Each trial ran for **75,000 timesteps**.  4. `theta1_dot`: Angular velocity of the first link (rad/s).
+We performed a random search with **6 trials** per algorithm to find the best hyperparameters. Each trial ran for **75,000 timesteps**. 
 
 ### Hyperparameter Tuning
 
