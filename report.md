@@ -18,7 +18,6 @@
 6. [Observations and Analysis](#6-observations-and-analysis)  
 7. [Challenges and Future Improvements](#7-challenges-and-future-improvements)  
 8. [Conclusion](#8-conclusion)  
-9. [References](#9-references)  
 
 ---
 
@@ -37,8 +36,6 @@ This task is particularly challenging because:
 - It requires balancing multiple degrees of freedom simultaneously.
 - It tests the agent's ability to handle delayed effects and long-term planning.
 
-In RL terms, this is a Markov Decision Process (MDP) where the agent must learn a policy π(a|s) that maps states to actions to maximize expected discounted rewards.
-
 ### 1.3 Significance and Objectives
 This project evaluates three leading RL algorithms on the InvertedDoublePendulum-v4 environment from Gymnasium, powered by MuJoCo physics simulation. The objectives are:
 - To compare algorithm performance in terms of convergence speed, final reward, and robustness.
@@ -46,9 +43,6 @@ This project evaluates three leading RL algorithms on the InvertedDoublePendulum
 - To provide insights into algorithm selection for continuous control tasks.
 
 The experiment contributes to the broader RL literature by benchmarking modern algorithms on a standardized environment, aiding researchers and practitioners in algorithm selection.
-
-### 1.4 Related Work
-Previous studies have benchmarked RL algorithms on similar environments. For instance, Schulman et al. (2017) demonstrated PPO's effectiveness on continuous tasks, while Haarnoja et al. (2018) showed SAC's advantages in exploration. Fujimoto et al. (2018) highlighted TD3's improvements over DDPG. Our work extends these by providing a direct comparison on InvertedDoublePendulum-v4.
 
 ---
 
@@ -200,12 +194,17 @@ Final evaluation results:
 All algorithms achieved near-optimal performance (~9350+ rewards).
 
 ### 5.2 Learning Curves
-*Refer to `learning_curves.png`.*  
+![learning_curves](learning_curves.png)
 Curves show episode rewards over time. PPO converged fastest in wall-clock time, while SAC/TD3 leveraged replay buffers for efficiency.
 
 ### 5.3 Visualizations
-GIFs in `./videos/` demonstrate successful balancing.
 
+## SAC
+![sac_gif](videos/sac_final.gif)
+## TD3
+![td3_gif](videos/td3_final.gif)
+## PPO
+![ppo_gif](videos/ppo_final.gif)
 ---
 
 ## 6. Observations and Analysis
@@ -238,12 +237,3 @@ GIFs in `./videos/` demonstrate successful balancing.
 
 ## 8. Conclusion
 This project demonstrated the effectiveness of SAC, TD3, and PPO on InvertedDoublePendulum-v4, with PPO offering the best wall-clock efficiency. Results highlight the importance of tuning and provide a foundation for further RL research.
-
----
-
-## 9. References
-- Schulman, J., et al. (2017). Proximal Policy Optimization Algorithms.
-- Haarnoja, T., et al. (2018). Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning.
-- Fujimoto, S., et al. (2018). Addressing Function Approximation Error in Actor-Critic Methods.
-
-```
